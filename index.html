@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="left-nav">
+
+            <!-- LOGO -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                <circle cx="12" cy="12" r="10" fill="white" />
+                <path d="M7 10c3-1 7-1 10 1" stroke="black" stroke-width="1.5" fill="none" />
+                <path d="M7 13c3-1 6-1 9 1" stroke="black" stroke-width="1.5" fill="none" />
+                <path d="M7 16c2-1 5-1 7 1" stroke="black" stroke-width="1.5" fill="none" />
+            </svg>
+
+            <!-- HOME -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M3 10L12 3L21 10V21H14V14H10V21H3V10Z" />
+            </svg>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2" fill="none" />
+                    <line x1="16" y1="16" x2="21" y2="21" stroke="white" stroke-width="2" />
+                </svg>
+
+                <input type="text" placeholder="What do you want to play?">
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Premium</a>
+        <a href="#">Support</a>
+        <a href="#">Download</a>
+        <a href="#" class="login">Log in</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="library-header">
+            <h3>Your Library</h3>
+            <button class="create-btn">+ Create</button>
+        </div>
+
+        <div class="library-box">
+            <h4>Create your first playlist</h4>
+            <p>It's easy, we'll help you</p>
+            <button>Create playlist</button>
+        </div>
+
+        <div class="library-box">
+            <h4>Let's find podcasts</h4>
+            <p>We'll keep you updated</p>
+            <button>Browse</button>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <!-- TRENDING -->
+        <div class="section">
+            <h1>Trending Songs</h1>
+
+            <div class="cardContainer">
+                <div class="card" onclick="playSong(event,'song.mpeg','Bairan','Banjaare')">
+                    <img src="Bairan.jpg">
+                    <h3>Bairan</h3>
+                    <p>Banjaare</p>
+                </div>
+
+                <div class="card" onclick="playSong(event,'song2.mp3','Jaan Nisaar','Arijit Singh')">
+                    <img src="song2.webp">
+                    <h3>Jaan Nisaar</h3>
+                    <p>Arijit Singh</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARTISTS -->
+        <div class="section">
+            <h1>Popular Artists</h1>
+
+            <div class="artistContainer">
+                <div class="artist">
+                    <img src="artist1.webp">
+                    <p>Arijit Singh</p>
+                </div>
+
+                <div class="artist">
+                    <img src="artist2.webp">
+                    <p>Pritam</p>
+                </div>
+
+                <div class="artist">
+                    <img src="artist3.webp">
+                    <p>A.R Rahman</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- PLAYER -->
+<div class="player">
+    <div class="song-info">
+        <img src="Bairan.jpg" id="song-img">
+        <div>
+            <p id="song-title">No song</p>
+            <p id="song-artist">---</p>
+        </div>
+    </div>
+
+    <button id="play">▶</button>
+    <input type="range" id="progress">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

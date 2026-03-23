@@ -6,10 +6,6 @@ A frontend Spotify-inspired music player built with HTML, CSS, and JavaScript.
 
 🔗 [Click here to view](https://golden-fudge-a419f7.netlify.app/)
 
-## 📸 Preview
-
-![Preview](Song.jpg)
-
 ## ✨ Features
 
 - 🎧 Play / Pause songs
